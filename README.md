@@ -18,15 +18,20 @@ The results are expected to guide future research and encourage the development 
   - Submissions must be provided as a **ZIP file containing two trained models**, one for each track.
   - Teams may upload their training data as a ZIP file to a **cloud provider of their choice**, provided that it is accessible in **Germany** without requiring an account registration.  
 
-- **Execution Environment:**  
-  - The models must run on **Ubuntu 24.04**.  
-  - No external setup, installation, or internet access is allowed at runtime.  
 
 - **Model Creation Instructions:**  
-  Instructions and sample code for creating models using **ONNX** are available in file `test.py`.
+  - Instructions and example code for exporting a **CLIP ViT-B/16 model** to **ONNX** are provided in `export_clip_to_onnx.py`.  
+  - The script also includes an **evaluation step** to verify that the exported ONNX model produces the same outputs as the original PyTorch model, ensuring that the model conversion is correct. For testing purposes, the provided code should achieve approximately **93.50% accuracy on the LFW dataset** when the model is exported and evaluated correctly. You can download the LFW `.bin` evaluation data using the following link: [HERE](https://owncloud.fraunhofer.de/index.php/s/AQ9s1XqCKyfVnAZ)
 
 - **Deadline:**  
   All submissions must be received by **10.05.2026 (Anywhere on Earth, AOE)**.
+
+---
+
+## Execution Environment
+- The models must run on **Ubuntu 24.04** and **Python 3.9**.
+- You can install the required dependencies to create an ONNX model using the requirements.txt file: `pip install -r requirements.txt`
+- No external setup, installation, or internet access is allowed at runtime.  
 
 ---
 
