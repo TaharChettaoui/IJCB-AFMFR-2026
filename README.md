@@ -39,7 +39,7 @@ The results are expected to guide future research and encourage the development 
 
 ## FAQ
 
-**Q:** How can I register for the competition?
+**Q:** How can I register for the competition?  
 **A:** `Registration instructions are available on the competition website https://sites.google.com/view/ijcb-afmfr-2026`    
 
 ---
