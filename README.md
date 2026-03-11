@@ -2,7 +2,7 @@
 
 ## Overview
 
-The aim of this competition is to systematically **benchmark, evaluate and compare adaptation strategies for foundation models for the downstream task of FR** within a privacy-friendly framework. By providing a standardized evaluation protocol and metrics, the competition will highlight the strengths and limitations of different approaches, including their ability to generalize across diverse datasets. 
+This competition aims to systematically **benchmark, evaluate and compare adaptation strategies for foundation models for the downstream task of FR** within a privacy-friendly framework. By providing a standardized evaluation protocol and metrics, the competition will highlight the strengths and limitations of different approaches, including their ability to generalize across diverse datasets. 
 
 The competition will feature two tracks:
 - In the **first track**, participants will be provided with the full training dataset.
@@ -13,17 +13,20 @@ The results are expected to guide future research and encourage the development 
 ---
 
 ## CLIP Foundation Model
-For the competition we will use the **Contrastive Language–Image Pretraining (CLIP)** foundation model. **CLIP** is a multimodal model developed by OpenAI that learns joint representations of images and text. It is trained to associate images with their corresponding textual descriptions, allowing it to understand visual concepts through natural language. **CLIP** consists of two main components: an image encoder, which converts images into feature embeddings, and a text encoder, which converts textual descriptions into embeddings in the same feature space. This shared embedding space allows the model to measure the similarity between images and text.
+In this competition, participants are restricted to using the **Contrastive Language–Image Pretraining (CLIP)** foundation model. **CLIP** is a multimodal model developed by OpenAI that learns joint representations of images and text. It is trained to associate images with their corresponding textual descriptions, allowing it to understand visual concepts through natural language. **CLIP** consists of two main components: an image encoder, which converts images into feature embeddings, and a text encoder, which converts textual descriptions into embeddings in the same feature space. This shared embedding space allows the model to measure the similarity between images and text.
 
-For this competition, we will use the **ViT-B/16** variant of **CLIP**. Participants are free to use both encoders or only the image encoder, depending on their approach. Code to import and test the model is provided in `export_clip_to_onnx.py` (in the provided example, we exclusively use the image encoder).
+Participants are restricted to use the pretrained  **ViT-B/16** variant of **CLIP**. Participants are free to use both encoders or only the image encoder, depending on their approach. Code to import and test the model is provided in `export_clip_to_onnx.py` (in the provided example, we exclusively use the image encoder).
+
+The official source code to load  CLIP is provided under  [()] and the pretrained ViT-B/16 is provided under. Please strictly follow their terms of use and licenses. 
+
 
 ---
 
 ## Submission Guidelines
 
 - **Model Format:**  
-  - Submissions must be provided as a **ZIP file containing two trained models**, one for each track.
-  - Teams may upload their training data as a ZIP file to a **cloud provider of their choice**, provided that it is accessible in **Germany** without requiring an account registration.  
+  - Submissions must be provided as a **ZIP file containing one or two pretrained models**, based on each selected track. Participants can freely choose to participate in Track 1, Track 2, or both tracks.
+  - Teams may upload their adapted models as a ZIP file to a **cloud provider of their choice**, provided that it is accessible in **Germany** without requiring an account registration.  
 
 
 - **Model Creation Instructions:**    
@@ -35,12 +38,11 @@ For this competition, we will use the **ViT-B/16** variant of **CLIP**. Particip
   - **Before submitting**, test your model using the provided script without adding imports to the code. If any modifications to the `test.py` code are made (e.g., adapting the ONNX wrapper), please include the modified code in the submission ZIP file.
 
 - **Rules and Restrictions:**
-  - Participants are not allowed to modify or extend the CLIP architecture; for example, adding additional layers is prohibited. The submitted model must have the exact same architecture as the original.
-  - Participants may use the image encoder alone or both the image and text encoders of the CLIP foundation model.
-  - The use of external face recognition (FR) models is prohibited, including methods such as distillation from other models.
+  - The final submitted model must have the exact same architecture as the CLIP ViT-B/16 architecture.
+  - Participants may use the image encoder alone or both the image and text encoders of the CLIP ViT-B/16 foundation model.
+  - The use of external models other than CLIP ViT-B/16 (image and text encoders) is not allowed. This also prohibits the use of, for example,  pretrained face recognition models for knowledge distillation.
   
-- **Deadline:**  
-  - All submissions must be received by **10.05.2026 (Anywhere on Earth, AOE)**.
+
 
 ---
 
