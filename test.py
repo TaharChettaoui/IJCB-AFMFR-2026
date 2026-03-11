@@ -41,7 +41,7 @@ def main():
     image_size = 224
     batch_size = 256
     val_targets = ["lfw"]  # List of validation datasets to evaluate
-    eval_path = "/home/chettaou/workspace/data/validation" # Path to the evaluation data directory
+    eval_path = "TODO" # Path to the evaluation data directory
     onnx_path = "clip_visual.onnx"
 
     # Transform
