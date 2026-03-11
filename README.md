@@ -22,6 +22,9 @@ The results are expected to guide future research and encourage the development 
 - **Model Creation Instructions:**  
   - Instructions and example code for exporting a **CLIP ViT-B/16 model** to **ONNX** are provided in `export_clip_to_onnx.py`.  
   - The script also includes an **evaluation step** to verify that the exported ONNX model produces the same outputs as the original PyTorch model, ensuring that the model conversion is correct. For testing purposes, the provided code should achieve approximately **93.50% accuracy on the LFW dataset** when the model is exported and evaluated correctly. You can download the LFW `.bin` evaluation data using the following link: [HERE](https://owncloud.fraunhofer.de/index.php/s/AQ9s1XqCKyfVnAZ)
+ 
+- **BEFORE Submitting:**  
+  All participants must ensure that their submitted code runs in the specified execution environment described below. In addition, we provide a Python script `test.py` that can be used to upload and test your model on the LFW .bin dataset. **Before submitting**, test your model using the provided script without modifying or adding imports to the code. The only allowed changes are adapting the paths so they point to your model and the evaluation data (LFW).
 
 - **Deadline:**  
   All submissions must be received by **10.05.2026 (Anywhere on Earth, AOE)**.
@@ -30,6 +33,7 @@ The results are expected to guide future research and encourage the development 
 
 ## Execution Environment
 - The models must run on **Ubuntu 24.04** and **Python 3.9**.
+- The provided code was tested using cudatoolkit 11.8 and cudnn 8.9
 - You can install the required dependencies to create an ONNX model using the requirements.txt file: `pip install -r requirements.txt`
 - No external setup, installation, or internet access is allowed at runtime.  
 
