@@ -26,26 +26,27 @@ For this competition, we will use the **ViT-B/16** variant of **CLIP**. Particip
   - Teams may upload their training data as a ZIP file to a **cloud provider of their choice**, provided that it is accessible in **Germany** without requiring an account registration.  
 
 
-- **Model Creation Instructions:**  
+- **Model Creation Instructions:**    
   - Instructions and example code for exporting a **CLIP ViT-B/16 model** to **ONNX** are provided in `export_clip_to_onnx.py`.  
   - The script also includes an **evaluation step** to verify that the exported ONNX model produces the same outputs as the original PyTorch model, ensuring that the model conversion is correct. For testing purposes, the provided code should achieve approximately **93.50% accuracy on the LFW dataset** when the model is exported and evaluated correctly. You can download the LFW `.bin` evaluation data using the following link: [HERE](https://owncloud.fraunhofer.de/index.php/s/AQ9s1XqCKyfVnAZ)
  
 - **BEFORE Submitting:**  
-  All participants must ensure that their submitted code runs in the specified execution environment described below. In addition, we provide a Python script `test.py` that can be used to upload and test your model on the LFW `.bin` dataset. **Before submitting**, test your model using the provided script without adding imports to the code. If any modifications to the `test.py` code are made (e.g., adapting the ONNX wrapper), please include the modified code in the submission ZIP file.
+  - All participants must ensure that their submitted code runs in the specified execution environment described below. In addition, we provide a Python script `test.py` that can be used to upload and test your model on the LFW `.bin` dataset.
+  - **Before submitting**, test your model using the provided script without adding imports to the code. If any modifications to the `test.py` code are made (e.g., adapting the ONNX wrapper), please include the modified code in the submission ZIP file.
 
 - **Rules and Restrictions:**
-- Participants are not allowed to modify or extend the CLIP architecture; for example, adding additional layers is prohibited. The submitted model must have the exact same architecture as the original.
-- Participants may use the image encoder alone or both the image and text encoders of the CLIP foundation model.
-- The use of external face recognition (FR) models is prohibited, including methods such as distillation from other models.
+  - Participants are not allowed to modify or extend the CLIP architecture; for example, adding additional layers is prohibited. The submitted model must have the exact same architecture as the original.
+  - Participants may use the image encoder alone or both the image and text encoders of the CLIP foundation model.
+  - The use of external face recognition (FR) models is prohibited, including methods such as distillation from other models.
   
 - **Deadline:**  
-  All submissions must be received by **10.05.2026 (Anywhere on Earth, AOE)**.
+  - All submissions must be received by **10.05.2026 (Anywhere on Earth, AOE)**.
 
 ---
 
 ## Execution Environment
 - The models must run on **Ubuntu 24.04** and **Python 3.9**.
-- The provided code was tested using cudatoolkit 11.8 and cudnn 8.9
+- The provided code was tested using **cudatoolkit 11.8** and **cudnn 8.9**.
 - You can install the required dependencies to create an ONNX model using the requirements.txt file: `pip install -r requirements.txt`
 - No external setup, installation, or internet access is allowed at runtime.
 
