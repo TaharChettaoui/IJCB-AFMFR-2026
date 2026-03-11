@@ -262,7 +262,7 @@ def load_bin(path, image_size, transform):
 
 
 class CallBackVerification(object):
-    def __init__(self, frequent, rank, val_targets, rec_prefix, image_size, transform, batch_size_eval, model_name):
+    def __init__(self, frequent, rank, val_targets, rec_prefix, image_size, transform, batch_size_eval):
         self.frequent: int = frequent
         self.rank: int = rank
         self.highest_acc: float = 0.0
@@ -270,7 +270,6 @@ class CallBackVerification(object):
         self.ver_list: List[object] = []
         self.ver_name_list: List[str] = []
         self.batch_size_eval = batch_size_eval
-        self.model_name = model_name
         if self.rank == 0:
             self.init_dataset(val_targets=val_targets, data_dir=rec_prefix, image_size=image_size, transform=transform)
 
@@ -278,8 +277,6 @@ class CallBackVerification(object):
         results = []
         dict_results = {}
 
-        if self.model_name == "clip":
-            backbone = backbone.module.visual
 
         for i in range(len(self.ver_list)):
             acc1, std1, acc2, std2, xnorm, embeddings_list = test(self.ver_list[i], backbone, self.batch_size_eval, 10)
