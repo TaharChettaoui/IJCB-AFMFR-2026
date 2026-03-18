@@ -26,7 +26,7 @@ Participants are restricted to use the pretrained  **ViT-L/14** variant of **CLI
   - Teams may upload their adapted models as a ZIP file to a **cloud provider of their choice**, provided that it is accessible in **Germany** without requiring an account registration.  
 
 - **Model Creation Instructions:**    
-  - Instructions and example code for exporting a **CLIP ViT-B/16 model** to **ONNX** are provided in `export_clip_to_onnx.py`.  
+  - Instructions and example code for exporting a **CLIP ViT-L/14 model** to **ONNX** are provided in `export_clip_to_onnx.py`.  
   - The script also includes an **evaluation step** to verify that the exported ONNX model produces the same outputs as the original PyTorch model, ensuring that the model conversion is correct. For testing purposes, the provided code should achieve approximately **93.50% accuracy on the LFW dataset** when the model is exported and evaluated correctly. You can download the LFW `.bin` evaluation data using the following link: [HERE](https://owncloud.fraunhofer.de/index.php/s/AQ9s1XqCKyfVnAZ)
  
 - **BEFORE Submitting:**  
@@ -34,9 +34,9 @@ Participants are restricted to use the pretrained  **ViT-L/14** variant of **CLI
   - **Before submitting**, test your model using the provided script without adding imports to the code. If any modifications to the `test.py` code are made (e.g., adapting the ONNX wrapper), please include the modified code in the submission ZIP file.
 
 - **Rules and Restrictions:**
-  - The final submitted model must have the exact same architecture as the CLIP ViT-B/16 architecture.
-  - Participants may use the image encoder alone or both the image and text encoders of the CLIP ViT-B/16 foundation model.
-  - The use of external models other than CLIP ViT-B/16 (image and text encoders) is not allowed. This also prohibits the use of, for example, pretrained face recognition models for knowledge distillation.
+  - The final submitted model must have the exact same architecture as the CLIP ViT-L/14 architecture.
+  - Participants may use the image encoder alone or both the image and text encoders of the CLIP ViT-L/14 foundation model.
+  - The use of external models other than CLIP ViT-L/14 (image and text encoders) is not allowed. This also prohibits the use of, for example, pretrained face recognition models for knowledge distillation.
   - No external setup, installation, or internet access is allowed at runtime.
   
 ---
