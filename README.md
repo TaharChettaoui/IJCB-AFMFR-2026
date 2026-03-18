@@ -27,7 +27,7 @@ Participants are restricted to use the pretrained  **ViT-L/14** variant of **CLI
 
 - **Model Creation Instructions:**    
   - Instructions and example code for exporting a **CLIP ViT-L/14 model** to **ONNX** are provided in `export_clip_to_onnx.py`.  
-  - The script also includes an **evaluation step** to verify that the exported ONNX model produces the same outputs as the original PyTorch model, ensuring that the model conversion is correct. For testing purposes, the provided code should achieve approximately **???% accuracy on the LFW dataset** when the model is exported and evaluated correctly. You can download the LFW `.bin` evaluation data using the following link: [HERE](https://paddle-model-ecology.bj.bcebos.com/whole_chain/insight-face/lfw.bin)
+  - The script also includes an **evaluation step** to verify that the exported ONNX model produces the same outputs as the original PyTorch model, ensuring that the model conversion is correct. For testing purposes, the provided code should achieve approximately **95,50% accuracy on the LFW dataset** when the model is exported and evaluated correctly. You can download the LFW `.bin` evaluation data using the following link: [HERE](https://paddle-model-ecology.bj.bcebos.com/whole_chain/insight-face/lfw.bin)
  
 - **BEFORE Submitting:**  
   - We provide a Python script `test.py` that can be used to upload and test your model on the LFW `.bin` dataset. This script is intended solely to verify that the ONNX model you provided is working correctly.
