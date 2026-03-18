@@ -86,7 +86,7 @@ def main():
     device = "cuda"
     image_size = 224
     batch_size = 256
-    backbone_name = "ViT-B/16"
+    backbone_name = "ViT-L/14"
 
     val_targets = ["lfw"]  # List of validation datasets to evaluate
     eval_path = "TODO" # Path to the evaluation data directory
