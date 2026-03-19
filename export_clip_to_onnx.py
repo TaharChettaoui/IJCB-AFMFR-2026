@@ -89,7 +89,7 @@ def main():
     backbone_name = "ViT-L/14"
 
     val_targets = ["lfw"]  # List of validation datasets to evaluate
-    eval_path = "TODO" # Path to the evaluation data directory
+    eval_path = "/home/chettaou/workspace/data/test" # Path to the evaluation data directory
     onnx_path = "clip_visual.onnx"
 
     # Transform
@@ -106,7 +106,6 @@ def main():
         image_size,
         transform,
         batch_size,
-        "",
     )
 
     # Load CLIP vision encoder
