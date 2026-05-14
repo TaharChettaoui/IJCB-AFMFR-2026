@@ -23,7 +23,8 @@ Participants are restricted to use the pretrained  **ViT-L/14** variant of **CLI
 
 - **Model Format:**  
   - Submissions must be provided as a **ZIP file containing one or two pretrained models**, based on each selected track. Participants can freely choose to participate in Track 1, Track 2, or both tracks.
-  - Teams may upload their adapted models as a ZIP file to a **cloud provider of their choice**, provided that it is accessible in **Germany** without requiring an account registration.  
+  - Teams may upload their adapted models as a ZIP file to a **cloud provider of their choice**, provided that it is accessible in **Germany** without requiring an account registration.
+  - Please send the Link of your submission with "IJCB-AFMFR-SUBMISSION" as subject to the following e-mail: tahar.chettaoui@igd.fraunhofer.de 
 
 - **Model Creation Instructions:**    
   - Instructions and example code for exporting a **CLIP ViT-L/14 model** to **ONNX** are provided in `export_clip_to_onnx.py`.  
